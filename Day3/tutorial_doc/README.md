@@ -7,12 +7,6 @@ Documentation for code comes in many forms. Some include
  * README files: text files that come with the code
  * Documentation pages: webpages of documentation
 
-# Demo Goal
-Here, we'll discuss how to construct a docstring for a given function,
-and then how we can an automated tool
-([sphinx](https://www.sphinx-doc.org/en/master/)) to automatically
-compile all of the docstrings in a given repo into a webpage.
-
 ## Jason's hot takes on documentation
  * Perfect is the enemy of good.
  * The three most important aspects of your code to document (if you document nothing else): 
@@ -67,9 +61,9 @@ def cross_corr(a: np.array, b: np.array) -> np.array:
 
 Note that this does not change the behavior of the function. The function will not check that `a` and `b` are actually arrays that get passed in, and it will not guarantee the output will return an array (you still have to do those type checks yourself). However, it will make it easier for IDEs and debuggers to identify bugs in your code before you run it and provide hints. 
 
-# Sphinx website quickstart guide
+# Demo: Sphinx website quickstart guide
 
-1. In this example, we will create a documentation website for our example package `correlate`, which is located at `Day3/tutorial_doc/` in
+1. In this demo, we will create a documentation website for our example package `correlate`, which is located at `Day3/tutorial_doc/` in
 the codeastro repository. The correlate package as a single module (`correlate.py`) with a few functions. This demo is meant to be similar to how you would set up the doc for your project. Start by using `cd` to move into the
 `tutorial_doc` directory.
 
