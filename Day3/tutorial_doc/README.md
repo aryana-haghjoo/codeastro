@@ -49,18 +49,6 @@ document code that can be easily parsed by automated
 documentation tools, like
 [sphinx](https://www.sphinx-doc.org/en/master/). 
 
-### Python Type Hinting
-
-By default in Python, you can pass any kind of object into any argument. There is no syntax prohibiting it (although your code might crash!). However, we frequently actually know exactly what is the type of a given input or output. A small formatting technique to make your functions more easy to understand and also assist IDE/dsebugging tools is to add "Type Hinting" to your functions. The `cross_corr()` function can be type hinted when defining the function signature:
-
-```
-import numpy as np
-
-def cross_corr(a: np.array, b: np.array) -> np.array:
-```
-
-Note that this does not change the behavior of the function. The function will not check that `a` and `b` are actually arrays that get passed in, and it will not guarantee the output will return an array (you still have to do those type checks yourself). However, it will make it easier for IDEs and debuggers to identify bugs in your code before you run it and provide hints. 
-
 # Demo: Sphinx website quickstart guide
 
 1. In this demo, we will create a documentation website for our example package `correlate`, which is located at `Day3/tutorial_doc/` in
@@ -245,6 +233,18 @@ We can make a link to the correlation page by referring to its label
 * :ref:`search`
 
  ```
+
+## Bonus: Python Type Hinting
+
+By default in Python, you can pass any kind of object into any argument. There is no syntax prohibiting it (although your code might crash!). However, we frequently actually know exactly what is the type of a given input or output. A small formatting technique to make your functions more easy to understand and also assist IDE/dsebugging tools is to add "Type Hinting" to your functions. The `cross_corr()` function can be type hinted when defining the function signature:
+
+```
+import numpy as np
+
+def cross_corr(a: np.array, b: np.array) -> np.array:
+```
+
+Note that this does not change the behavior of the function. The function will not check that `a` and `b` are actually arrays that get passed in, and it will not guarantee the output will return an array (you still have to do those type checks yourself). However, it will make it easier for IDEs and debuggers to identify bugs in your code before you run it and provide hints. 
 
 # Activity: Building Sphinx Documentation For Your Repository
 1. Document at least one function in your package with a docstring. 
